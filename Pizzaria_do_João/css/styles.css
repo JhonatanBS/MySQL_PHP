@@ -1,3 +1,18 @@
-h1{
-    color: blue;
+html, body{
+    height: 100%;
+}
+
+/* NAVBAR */
+
+#brand-logo {
+    width: 50px;
+}
+
+.navbar.navbar-expand-lg{
+    background-color: #000000;
+    font-weight: bold;
+}
+
+.navbar.navbar-expand-lg a{
+    color: #FFFFFF;
 }
