@@ -2,11 +2,11 @@
     include_once("templates/header.php");
 ?>    
     
-    <div class="main-banner">
+    <div id="main-banner">
         <h1>Faça seu Pedido</h1>
     </div>
 
-    <div class="main-container">
+    <div id="main-container">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
