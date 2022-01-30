@@ -94,5 +94,43 @@
 
     }else if($method === "POST"){
 
+      // verificando tipo de POST
+    $type = $_POST["type"];
+
+    // deletar pedido
+    if($type === "delete") {
+
+      $pizzaId = $_POST["id"];
+
+      $deleteQuery = $conn->prepare("DELETE FROM pedidos WHERE pizza_id = :pizza_id;");
+
+      $deleteQuery->bindParam(":pizza_id", $pizzaId, PDO::PARAM_INT);
+
+      $deleteQuery->execute();
+
+      $_SESSION["msg"] = "Pedido removido com sucesso!";
+      $_SESSION["status"] = "success";
+
+    // Atualizar status do pedido
+    } else if($type === "update") {
+
+      $pizzaId = $_POST["id"];
+      $statusId = $_POST["status"];
+
+      $updateQuery = $conn->prepare("UPDATE pedidos SET status_id = :status_id WHERE pizza_id = :pizza_id");
+
+      $updateQuery->bindParam(":pizza_id", $pizzaId, PDO::PARAM_INT);
+      $updateQuery->bindParam(":status_id", $statusId, PDO::PARAM_INT);
+
+      $updateQuery->execute();
+
+      $_SESSION["msg"] = "Pedido atualizado com sucesso!";
+      $_SESSION["status"] = "success";
+
+    }
+
+    // retorna usuário para dashboard
+    header("Location: ../dashboard.php");
+
     }
 ?>
