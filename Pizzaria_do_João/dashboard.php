@@ -22,33 +22,43 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>#1</td>
-                                <td>Cheddar</td>
-                                <td>Catupiry</td>
-                                <td>4 Queijos</td>
-                                <td>
-                                    <form action="process/orders.php" method="POST" class="form-group update-form">
-                                        <input type="hidden" name="type" value="update">
-                                        <input type="hidden" name="id" value="1">
-                                        <select name="status" class="form-control status-input">
-                                            <option value="">Entrega</option>
-                                        </select>
-                                        <button type="submit" class="update-btn">
-                                            <i class="fas fa-sync-alt"></i>
-                                        </button>
-                                    </form>
-                                </td>
-                                <td>
-                                    <form action="process/orders.php" method="POST">
-                                        <input type="hidden" name="type" value="delete">
-                                        <input type="hidden" name="id" value="1">
-                                        <button type="submit" class="delete-btn">
-                                            <i class="fas fa-times"></i>
-                                        </button>
-                                    </form>
-                                </td>
-                            </tr>
+                            <?php foreach($pizzas as $pizza): ?>
+                                <tr>
+                                    <td><?= $pizza["id"] ?></td>
+                                    <td><?= $pizza["borda"] ?></td>
+                                    <td><?= $pizza["massa"] ?></td>
+                                    <td>
+                                        <ul>
+                                            <?php foreach($pizza["sabores"] as $sabor): ?>
+                                               <li><?= $sabor; ?></li>
+                                            <?php endforeach; ?>    
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <form action="process/orders.php" method="POST" class="form-group update-form">
+                                            <input type="hidden" name="type" value="update">
+                                            <input type="hidden" name="id" value="<?= $pizza["id"] ?>">
+                                            <select name="status" class="form-control status-input">
+                                                <?php foreach($status as $s): ?>
+                                                    <option value="<?= $s["id"] ?>" <?php echo ($s["id"] == $pizza["status"]) ? "selected" : ""; ?> ><?= $s["tipo"] ?></option>
+                                                <?php endforeach; ?>    
+                                            </select>
+                                            <button type="submit" class="update-btn">
+                                                <i class="fas fa-sync-alt"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="process/orders.php" method="POST">
+                                            <input type="hidden" name="type" value="delete">
+                                            <input type="hidden" name="id" value="<?= $pizza["id"] ?>">
+                                            <button type="submit" class="delete-btn">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>    
                         </tbody>
                     </table>
                 </div>
