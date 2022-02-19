@@ -20,4 +20,8 @@
   ![](https://github.com/JhonatanBS/MySQL_PHP/blob/master/Pizzaria_do_Jo%C3%A3o/img/dashboard.png)
   <hr>
    
+  <h4 align="center">BLOG </h4>
+  <hr>
   
+  ![](https://github.com/JhonatanBS/MySQL_PHP/blob/master/Blog/Projeto%20Blog.png)
+  <hr>
