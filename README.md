@@ -14,14 +14,14 @@
   
   <hr>
   
-  ![](https://github.com/JhonatanBS/MySQL_PHP/blob/master/Pizzaria_do_Jo%C3%A3o/img/pizzaria.php.png)
+  ![](https://github.com/JhonatanBS/MySQL_PHP/blob/main/Pizzaria_do_Jo%C3%A3o/img/pizzaria.php.png)
   <hr>
   
-  ![](https://github.com/JhonatanBS/MySQL_PHP/blob/master/Pizzaria_do_Jo%C3%A3o/img/dashboard.png)
+  ![](https://github.com/JhonatanBS/MySQL_PHP/blob/main/Pizzaria_do_Jo%C3%A3o/img/dashboard.png)
   <hr>
    
   <h4 align="center">BLOG </h4>
   <hr>
   
-  ![](https://github.com/JhonatanBS/MySQL_PHP/blob/master/Blog/Projeto%20Blog.png)
+  ![](https://github.com/JhonatanBS/MySQL_PHP/blob/main/Blog/Projeto%20Blog.png)
   <hr>
